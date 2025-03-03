@@ -23,7 +23,7 @@ class BreweryViewModel(
         fetchBreweries()
     }
 
-    fun fetchBreweries() {
+    private fun fetchBreweries() {
         viewModelScope.launch {
             _state.update { it.copy(isLoading = true) }
             breweryRepository.fetchBreweriesFromIreland().collectLatest { result ->

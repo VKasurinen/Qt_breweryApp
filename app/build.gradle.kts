@@ -7,7 +7,7 @@ plugins {
 
 QtBuild {
     qtPath = file("F:\\QT\\6.8.2")
-    projectPath = file("F:\\QTProjects\\QT_test")
+    projectPath = file("F:\\QTProjects\\QT_Testing")
 }
 
 android {
@@ -47,6 +47,7 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -112,6 +113,4 @@ dependencies {
 
     implementation(libs.androidx.paging.runtime)
     implementation(libs.androidx.paging.compose)
-
-//    implementation(libs.qtandroid)
 }
